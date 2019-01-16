@@ -15,6 +15,13 @@ class MainActivity : AppCompatActivity() {
         // Al cambiar a horizontal sale un toast
         if (txtHorizontal != null) {
             toast("Horizontal")
+
+            if (savedInstanceState == null) {
+                supportFragmentManager
+                        .beginTransaction()
+                        .add(R.id.fragment, Detalles.newInstance(), "Detalles")
+                        .commit()
+            }
         }
 
         // Hacemos que cada vez que cliquemos el boton cambiemos de activity
