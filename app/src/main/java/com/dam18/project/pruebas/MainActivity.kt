@@ -18,10 +18,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Hacemos que cada vez que cliquemos el boton cambiemos de activity
-        btnVertical.setOnClickListener {
-            //TO DO
+        btnChange.setOnClickListener {
+            startActivity(intentFor<New>("id" to 5).singleTop())
         }
-
-
     }
 }
