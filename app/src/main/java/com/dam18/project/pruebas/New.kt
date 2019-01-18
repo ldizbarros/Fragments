@@ -13,5 +13,12 @@ class New : AppCompatActivity() {
 
         val valor = intent.getIntExtra("id",0)
         txtNew.setText(valor.toString())
+
+        if (savedInstanceState == null) {
+            supportFragmentManager
+                    .beginTransaction()
+                    .add(R.id.fragmentNew, Detalles.newInstance(), "Detalles")
+                    .commit()
+        }
     }
 }

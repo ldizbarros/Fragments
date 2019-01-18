@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             if (savedInstanceState == null) {
                 supportFragmentManager
                         .beginTransaction()
-                        .add(R.id.fragment, Detalles.newInstance(), "Detalles")
+                        .add(R.id.fragmentH, Detalles.newInstance(), "Detalles")
                         .commit()
             }
         }
