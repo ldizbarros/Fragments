@@ -12,13 +12,6 @@ class New : AppCompatActivity() {
         setContentView(R.layout.activity_new)
 
         val valor = intent.getIntExtra("id",0)
-        txtNew.setText(valor.toString())
-
-        if (savedInstanceState == null) {
-            supportFragmentManager
-                    .beginTransaction()
-                    .add(R.id.fragmentNew, Detalles.newInstance(), "Detalles")
-                    .commit()
-        }
+        txtNew.setText("Se ha recibido --> "+valor.toString())
     }
 }

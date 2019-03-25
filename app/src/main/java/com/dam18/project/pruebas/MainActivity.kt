@@ -26,7 +26,14 @@ class MainActivity : AppCompatActivity() {
 
         // Hacemos que cada vez que cliquemos el boton cambiemos de activity
         btnChange.setOnClickListener {
-            startActivity(intentFor<New>("id" to 5).singleTop())
+            if (txtHorizontal != null) {
+                supportFragmentManager
+                        .beginTransaction()
+                        .add(R.id.fragmentH, Detalles.newInstance(), "Detalles")
+                        .commit()
+            }else{
+                startActivity(intentFor<New>("id" to 5).singleTop())
+            }
         }
     }
 }
